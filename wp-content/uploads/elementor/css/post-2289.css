@@ -1,0 +1,20 @@
+.elementor-2289 .elementor-element.elementor-element-0e30c6a > .elementor-container {max-width: 1110px;}
+.elementor-2289 .elementor-element.elementor-element-0e30c6a {padding: 25px 0px 0px 0px;}
+.elementor-2289 .elementor-element.elementor-element-2c2d66e > .elementor-column-wrap > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {margin-bottom: 0px;}
+.elementor-2289 .elementor-element.elementor-element-2c2d66e > .elementor-element-populated {padding: 0px 0px 0px 0px;}
+.elementor-2289 .elementor-element.elementor-element-46c605e > .elementor-element-populated {padding: 0px 0px 0px 25px;}
+.elementor-2289 .elementor-element.elementor-element-5a24c70 .jeg_post_title > a {font-size: 14px;font-weight: 600;text-transform: capitalize;}
+.elementor-2289 .elementor-element.elementor-element-5a24c70 > .elementor-widget-container {padding: 0px 0px 0px 0px;border-radius: 10px 10px 10px 10px;}
+.elementor-2289 .elementor-element.elementor-element-429b4be > .elementor-widget-container {padding: 20px 20px 20px 20px;border-style: solid;border-width: 1px 1px 1px 1px;border-color: #ddd;border-radius: 10px 10px 10px 10px;}
+@media (max-width:1024px) {.elementor-2289 .elementor-element.elementor-element-0e30c6a {padding: 25px 20px 0px 20px;}
+	.elementor-2289 .elementor-element.elementor-element-2c2d66e > .elementor-element-populated {padding: 0px 25px 0px 0px;}
+	.elementor-2289 .elementor-element.elementor-element-46c605e > .elementor-element-populated {padding: 0px 0px 0px 0px;}
+	.elementor-2289 .elementor-element.elementor-element-5a24c70 > .elementor-widget-container {border-radius: 10px 10px 10px 10px;}}
+@media (max-width:767px) {.elementor-2289 .elementor-element.elementor-element-0e30c6a {padding: 25px 20px 0px 20px;}
+	.elementor-2289 .elementor-element.elementor-element-2c2d66e > .elementor-element-populated {padding: 0px 0px 0px 0px;}
+	.elementor-2289 .elementor-element.elementor-element-46c605e > .elementor-element-populated {padding: 0px 0px 0px 0px;}
+	.elementor-2289 .elementor-element.elementor-element-429b4be > .elementor-widget-container {padding: 0px 0px 0px 0px;}}
+@media (min-width:768px) {.elementor-2289 .elementor-element.elementor-element-2c2d66e {width: 70%;}
+	.elementor-2289 .elementor-element.elementor-element-46c605e {width: 30%;}}
+@media (max-width:1024px) and (min-width:768px) {.elementor-2289 .elementor-element.elementor-element-2c2d66e {width: 65%;}
+	.elementor-2289 .elementor-element.elementor-element-46c605e {width: 35%;}}
