@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style id="kirki-css-vars">:root{}</style><title>Tirando leite de pedra com o plugin Autoptimize no WordPress + Plugins de Cache – Universo Turbo</title>
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://github.com/barsadigital/universo-turbo/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ugb-style-css-css" href="https://github.com/barsadigital/universo-turbo/wp-content/plugins/stackable-ultimate-gutenberg-blocks/dist/frontend_blocks.css" type="text/css" media="all">
+<style id="ugb-style-css-inline-css" type="text/css">
+:root {
+			--content-width: 1200px;
+		}
+</style>
+<link rel="stylesheet" id="ultimate_blocks-cgb-style-css-css" href="https://github.com/barsadigital/universo-turbo/wp-content/plugins/ultimate-blocks/dist/blocks.style.build.css" type="text/css" media="all">
+<link rel="stylesheet" id="kadence-blocks-style-css-css" href="https://github.com/barsadigital/universo-turbo/wp-content/plugins/kadence-blocks/dist/blocks.style.build.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpbf-style-css" href="https://github.com/barsadigital/universo-turbo/wp-content/themes/page-builder-framework/style.css" type="text/css" media="all">
+<style id="wpbf-style-inline-css" type="text/css">
+body{color:#333333;}.wpbf-menu,.wpbf-mobile-menu{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;}a{color:#183fb3;}.bypostauthor{border-color:#183fb3;}.wpbf-button-primary{background:#183fb3;}a:hover{color:#1f80d4;}.wpbf-button-primary:hover{background:#1f80d4;}.wpbf-menu > .current-menu-item > a{color:#1f80d4!important;}.wpbf-button,input[type="submit"]{background:#333333;color:#ffffff;}.wpbf-button:hover,input[type="submit"]:hover{background:#e45c5c;color:#ffffff;}.wpbf-sidebar .widget,.elementor-widget-sidebar .widget{padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;}@media screen and (max-width:1024px){.wpbf-sidebar .widget,.elementor-widget-sidebar .widget{padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;}}@media screen and (max-width:480px){.wpbf-sidebar .widget,.elementor-widget-sidebar .widget{padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;}}.blog #inner-content,.search #inner-content,.archive #inner-content{max-width:650px;}.wpbf-archive-content .wpbf-post{text-align:left;}.wpbf-archive-content .wpbf-post-style-plain{margin-bottom:20px;padding-bottom:20px;}.wpbf-archive-content .wpbf-post .entry-title{font-size:18px;}.wpbf-archive-content .wpbf-post .entry-summary{font-size:14px;}.wpbf-archive-content .wpbf-blog-layout-beside .wpbf-grid{flex-direction:row;}.single #inner-content{max-width:650px;}.wpbf-logo a,.wpbf-mobile-logo a{color:#ffffff;}.wpbf-nav-wrapper{max-width:1150px;padding-top:10px;padding-bottom:10px;}.wpbf-navigation{background-color:#333333;}.wpbf-menu a,.wpbf-mobile-menu a,.wpbf-close{color:#ffffff;}.wpbf-menu a:hover,.wpbf-mobile-menu a:hover{color:#ffffff;}.wpbf-menu > .current-menu-item > a,.wpbf-mobile-menu > .current-menu-item > a{color:#ffffff!important;}.wpbf-sub-menu > .menu-item-has-children:not(.wpbf-mega-menu) .sub-menu li,.wpbf-sub-menu > .wpbf-mega-menu > .sub-menu{background-color:#333333;}.wpbf-sub-menu > .menu-item-has-children:not(.wpbf-mega-menu) .sub-menu li:hover{background-color:#ffffff;}.wpbf-sub-menu > .menu-item-has-children:not(.wpbf-mega-menu) li{border-bottom:1px solid #f5f5f7;border-bottom-color:#7a7a7a;}.wpbf-sub-menu > .menu-item-has-children:not(.wpbf-mega-menu) li:last-child{border-bottom:none}.wpbf-menu .sub-menu a{color:#ffffff;font-size:16px;}.wpbf-menu .sub-menu a:hover{color:#333333;}.wpbf-mobile-nav-wrapper{padding-top:10px;padding-bottom:10px;}.wpbf-mobile-nav-wrapper{background:#333333;}.wpbf-mobile-menu a,.wpbf-mobile-menu-container .wpbf-close{color:#333333;}.wpbf-mobile-menu a:hover{color:#ffffff;}.wpbf-mobile-menu > .current-menu-item > a{color:#ffffff!important;}.wpbf-mobile-menu .menu-item{border-top-color:#f4f4f4;}.wpbf-mobile-menu > .menu-item:last-child{border-bottom-color:#f4f4f4;}.wpbf-mobile-nav-item{color:#ffffff;font-size:18px;}.wpbf-mobile-nav-item a{color:#ffffff;}.wpbf-mobile-menu > .menu-item a{background-color:#ffffff;}.wpbf-mobile-menu > .menu-item a:hover{background-color:#1e73be;}.wpbf-mobile-menu .wpbf-submenu-toggle{color:#333333;}.wpbf-inner-footer{padding-top:20px;padding-bottom:20px;}
+</style>
+<link rel="stylesheet" id="wpbf-responsive-css" href="https://github.com/barsadigital/universo-turbo/wp-content/themes/page-builder-framework/css/min/responsive-min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpbf-style-child-css" href="https://github.com/barsadigital/universo-turbo/wp-content/themes/page-builder-framework-child/style.css" type="text/css" media="all">
+<script type="text/javascript" src="https://github.com/barsadigital/universo-turbo/wp-content/plugins/stackable-ultimate-gutenberg-blocks/dist/frontend_blocks.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4"></script>
+
+
+
+
+
+
+
+
+<style type="text/css" id="simple-css-output">.jeg_post_category a { border-radius:20px; }.jeg_pl_md_box .jeg_thumb img { border-radius:10px;}.jeg_pl_md_box .jeg_postblock_content { border-radius:10px}.thumbnail-container > img { border-radius:10px}.jeg_block_heading_2{ border-radius:10px}.jeg_pl_md_box .jeg_postblock_content { padding: 50px 20px 20px;}.jeg_block_heading_2 .jeg_block_title span{ border-radius: 0px;}.elementor img{ border-radius:10px !important}.submit{ border-radius:30px; box-shadow: 0 3px 0px #851313;}textarea, select, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="number"], input[type="datetime"]{ border-radius:10px;}.comment{ border-radius:10px; border: 1px solid #dedee5;}.comment-form-url{ display:none}input[type="checkbox"], input[type="radio"] { margin-right: 5px;}h3.entry-title{ font-size:18px; margin:0;}.entry-summary{ font-size:14px;}.article-meta{margin-bottom:0 }.comment .avatar{ display:none}.jeg_pl_lg_2 .jeg_readmore, .jeg_pl_lg_3 .jeg_readmore{ display:none;}.breadcrumbs{ font-size:12px}ul{padding:0}a.wp_rss_retriever_title{color: #333;font-weight: 700;line-height: 1.2; }.wpbf-navigation {box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);} .jeg_heroblock_9 .jeg_heroblock_wrapper { border-radius:10px } .page-id-110 .wpbf-navigation{background-color:#E22A00}.page-id-2279 .wpbf-navigation{background-color:#46B5DE}.jeg_meta_author a {color: #000}</style>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css" id="wp-custom-css">
+			.indice{
+	border: 1px solid #dfe1e5;
+	padding-left:50px;
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-right:20px;
+	border-radius:10px;
+	margin-top:20px
+}
+.row {
+    -webkit-columns: 2 200px;
+       -moz-columns: 2 200px;
+            columns: 2 200px;
+    -webkit-column-gap: 4em;
+       -moz-column-gap: 4em;
+            column-gap: 4em;
+    -webkit-column-rule: 1px dotted #ddd;
+       -moz-column-rule: 1px dotted #ddd;
+            column-rule: 1px dotted #ddd;
+	
+}
+
+p {
+  margin-bottom: 1.3em;
+	
+}
+.wid_title h2{
+	font-size:16px;
+	color:#fff
+}
+.total{
+	padding:20px;
+	border-radius:10px;
+	border: 1px solid #dfe1e5;
+	margin-top:50px;
+	
+	background-color:#333;
+	color:#fff
+}
+.total a {
+	color:#fff
+}
+.wpbf-large-2-5{
+	display:none
+}
+.wpbf-large-3-5{
+	width:100%
+}
+h3.entry-title{
+	padding-bottom:10px
+}
+.page-title {
+	margin-bottom:10px
+}
+.taxonomy-description{
+	margin-bottom:0
+}
+.footer-categories{
+	margin-bottom:0
+}
+.pagination .page-numbers{
+height: 30px;
+line-height: 30px;
+padding: 0 10px;
+}
+.wpbf-archive-content .wpbf-post-style-plain {
+	padding-top: 25px;
+}
+.heateorSssClear {
+	padding-top:20px
+}
+#llc_comments{
+	margin-top:40px;
+	margin-bottom:40px
+}
+#llc_comments_button{
+background-color:#EB3535;
+		border-radius:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	color:#fff;
+	box-shadow: 0px 2px 0px 0px #00364f;
+}		
+#llc_comments_button:hover{
+	background-color:#bc2a2a;
+}
+.ub_review_cta_btn{
+	padding: 10px 10px;
+	color:#fff;
+	border:none
+}
+.ub_review_cta_btn:hover{
+	background-color:red !important
+}
+.venda{
+	background-color:#2C3FD3;
+		color:#fff
+}
+.img-home.wp-block-image img {
+	box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 10px;
+
+}
+.wp-block-image img {
+	border: solid 1px #d6d6d6;
+	border-radius: 10px;
+	padding:0px
+		
+}
+img.zoooom.aligncenter { padding: 0 !important; }		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-3009 single-format-standard wpbf wpbf-tirando-leite-de-pedra-com-o-plugin-autoptimize-no-wordpress wpbf-no-sidebar" itemscope="itemscope" itemtype="https://schema.org/Blog">
+	<a class="screen-reader-text skip-link" href="#content" title="Ir para o conteúdo">Ir para o conteúdo</a>
+
+	
+	
+	<div id="container" class="hfeed wpbf-page">
+
+		
+		
+		<header id="header" class="wpbf-page-header" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+
+			
+			
+			
+			<div class="wpbf-navigation" data-sub-menu-animation-duration="250">
+
+				
+				
+				
+<div class="wpbf-container wpbf-container-center wpbf-visible-large wpbf-nav-wrapper wpbf-menu-right">
+
+	<div class="wpbf-grid wpbf-grid-collapse">
+
+		<div class="wpbf-1-4 wpbf-logo-container">
+
+			<div class="wpbf-logo" itemscope="itemscope" itemtype="https://schema.org/Organization"><span class="site-title" itemprop="name"><a href="https://github.com/barsadigital/universo-turbo" rel="home" itemprop="url">Universo Turbo</a></span></div>
+		</div>
+
+		<div class="wpbf-3-4 wpbf-menu-container">
+
+			
+			<nav id="navigation" class="wpbf-clearfix" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Navegação no site">
+
+				
+				<ul id="menu-primary-navigation" class="wpbf-menu wpbf-sub-menu wpbf-sub-menu-align-left wpbf-sub-menu-animation-fade wpbf-menu-effect-none wpbf-menu-animation-fade wpbf-menu-align-center"><li id="menu-item-2850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2850"><a href="#">Guia de SEO</a></li>
+<li id="menu-item-2849" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2849"><a href="#">Guia de Plugins</a></li>
+<li id="menu-item-2852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2852"><a href="#">Guia de Hospedagem</a></li>
+<li id="menu-item-2851" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2851"><a href="#">Ferramentas</a></li>
+<li id="menu-item-1641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a>Mais</a></li>
+<li class="menu-item wpbf-menu-item-search" aria-haspopup="true" aria-expanded="false"><a href="javascript:void(0)" role="button"><span class="screen-reader-text">Alternar pesquisar</span><div class="wpbf-menu-search">
+<form role="search" method="get" id="searchform" class="searchform" action="https://github.com/barsadigital/universo-turbo/">
+	<label>
+		<span class="screen-reader-text">Procurar:</span>
+		<input type="search" id="s" name="s" value="" placeholder="Pesquisar …" title="Pressione enter para pesquisar">
+	</label>
+</form></div><i class="wpbff wpbff-search"></i></a></li></ul>
+				
+			</nav>
+
+			
+		</div>
+
+	</div>
+
+</div>
+				
+				
+<div class="wpbf-mobile-menu-hamburger wpbf-hidden-large">
+
+	<div class="wpbf-mobile-nav-wrapper wpbf-container">
+		
+		<div class="wpbf-mobile-logo-container wpbf-2-3">
+
+			<div class="wpbf-mobile-logo" itemscope="itemscope" itemtype="https://schema.org/Organization"><span class="site-title" itemprop="name"><a href="https://github.com/barsadigital/universo-turbo" rel="home" itemprop="url">Universo Turbo</a></span></div>
+		</div>
+
+		<div class="wpbf-menu-toggle-container wpbf-1-3">
+
+			<button href="javascript:void(0)" class="wpbf-mobile-nav-item wpbf-menu-item-search" aria-haspopup="true" aria-expanded="false"><span class="screen-reader-text">Alternar pesquisar</span><div class="wpbf-menu-search">
+<form role="search" method="get" id="searchform" class="searchform" action="https://github.com/barsadigital/universo-turbo/">
+	<label>
+		<span class="screen-reader-text">Procurar:</span>
+		<input type="search" id="s" name="s" value="" placeholder="Pesquisar …" title="Pressione enter para pesquisar">
+	</label>
+</form></div><i class="wpbff wpbff-search"></i></button>
+			<button id="wpbf-mobile-menu-toggle" href="javascript:void(0)" class="wpbf-mobile-nav-item wpbf-mobile-menu-toggle wpbff wpbff-hamburger" aria-label="Navegação no site" aria-controls="navigation" aria-expanded="false" aria-haspopup="true" role="button">
+				<span class="screen-reader-text">Alternância menu </span>
+			</button>
+
+			
+		</div>
+
+	</div>
+
+	<div class="wpbf-mobile-menu-container">
+
+		<nav id="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-labelledby="wpbf-mobile-menu-toggle">
+
+			<ul id="menu-primary-navigation-1" class="wpbf-mobile-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2850"><a href="#">Guia de SEO</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2849"><a href="#">Guia de Plugins</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2852"><a href="#">Guia de Hospedagem</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2851"><a href="#">Ferramentas</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a>Mais</a></li>
+</ul>
+		</nav>
+
+	</div>
+
+</div>
+				
+			</div>
+
+			
+		</header>		
+		
+		<div id="content">
+
+			
+			
+			<div id="inner-content" class="wpbf-container wpbf-container-center wpbf-padding-medium">
+				
+				<div class="wpbf-grid wpbf-main-grid wpbf-grid-medium">
+
+					
+					<main id="main" class="wpbf-main wpbf-medium-2-3 wpbf-single-content">
+
+						
+						
+						<article id="post-3009" class="post-3009 post type-post status-publish format-standard hentry category-plugins tag-autoptimize tag-cache wpbf-post" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+							<header class="article-header">
+
+								<h1 class="entry-title" itemprop="headline">Tirando leite de pedra com o plugin Autoptimize no WordPress + Plugins de Cache</h1>
+<p class="article-meta">
+
+	<span class="posted-on">Última atualização em</span> <time class="article-time published" datetime="2019-05-03T20:22:53-03:00" itemprop="datePublished">3 de maio de 2019</time> <span class="by">Por</span> <span class="article-author author vcard" itemscope="itemscope" itemprop="author" itemtype="https://schema.org/Person"><a class="url fn" href="https://github.com/barsadigital/universo-turbo/author/joao-correia/" title="Ver todos os post por João Correia" rel="author" itemprop="url"><span itemprop="name">João Correia</span></a></span>
+</p>
+
+
+							</header>
+
+							<section class="entry-content article-content" itemprop="text">
+
+								
+<div class="wp-block-ub-table-of-contents ub_table-of-contents editorskit-330201955340"><div class="ub_table-of-contents-header"><div class="ub_table-of-contents-title" id="ub_table-of-contents-title">O conteúdo desse artigo</div></div><div style="display:block" class="ub_table-of-contents-container ub_table-of-contents-1-column"><ul><li><a href="#0-1-dando-uma-pincelada">1. Dando uma Pincelada</a><ul><li><a href="#1-11-minificar-">1.1 Minificar </a></li><li><a href="#2-12-agregar-concatenar">1.2 Agregar (Concatenar)</a></li></ul></li><li><a href="#3-2-an%C3%A1lise-de-velocidade-antes">2. Análise de velocidade (antes)</a></li><li><a href="#4--3-principais-configura%C3%A7%C3%B5es-aba-js-css-html-"> 3. Principais configurações. Aba (JS, CSS, HTML) </a></li><li><a href="#5-4-configura%C3%A7%C3%B5es-avan%C3%A7adas-aba-extra">4. Configurações Avançadas. Aba (EXTRA)</a></li><li><a href="#6-5-an%C3%A1lise-de-velocidade-depois">5. Análise de velocidade (depois)</a></li><li><a href="#7-6-plugin-de-cache">6. Plugin de Cache</a></li><li><a href="#8-7-arquivos">7. Arquivos</a></li></ul></div></div>
+
+
+
+<p class="editorskit-329139560 editorskit-330195943122">Famoso na galeria do WordPress, o plugin Autoptimize tem mais de 900.000 downloads. Mas qual a finalidade dele?</p>
+
+
+
+<p class="editorskit-329124129253 editorskit-330195943133">Quando comecei a desenvolver sites com o wordpress, eu nem imaginava que esse tipo de plugin existia. Podemos considerar o autoptimize sendo da categoria de plugin otimizadores.</p>
+
+
+
+<div class="wp-block-ub-divider editorskit-330201417403"><div class="ub_divider" style="border-top:2px solid #eeeeee;margin-top:50px;margin-bottom:50px"></div></div>
+
+
+
+<h2 id="0-1-dando-uma-pincelada" class="editorskit-32913124279 editorskit-330195943143">1. Dando uma Pincelada</h2>
+
+
+
+<p class="editorskit-33011319447 editorskit-330195943147">É importante saber o que o plugin faz. Isso vai te ajudar na hora da escolha e a resolver possíveis pepinos.</p>
+
+
+
+<blockquote class="wp-block-quote editorskit-329124614112 editorskit-330195943153"><p> <br>Autoptimize torna bem fácil otimizar seu site. Pode agregar, minificar e armazenar (cache) scripts e estilos, adicionar CSS no elemento head da página por padrão (mas também pode adiar), move e adia scripts para o rodapé e minifica HTML. </p><cite>Criador:  Frank Goossens (futtta)</cite></blockquote>
+
+
+
+<p class="editorskit-3291247183 editorskit-330195943160">“Vixi, não entendi nada”. Se liga ai!</p>
+
+
+
+<h3 id="1-11-minificar-" class="editorskit-33011727626 editorskit-330195943165">1.1 Minificar </h3>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-33020634182"><div class="ub_notify_info"><p class="ub_notify_text" style="text-align:left"> Minificar: O processo de minificação nada mais é do que retirar os espaços em branco do código. Isso Faz com que ele seja menor e consequentemente reduz o tempo de carregamento do site. </p></div></div>
+
+
+
+<p class="editorskit-329185157351 editorskit-330195943173"></p>
+
+
+
+<p class="editorskit-329131031664 editorskit-330195943178">Agora imagine milhares de linhas de código no seu site. Minificar agora parece ser uma boa ideia.</p>
+
+
+
+<h3 id="2-12-agregar-concatenar" class="editorskit-329131614256 editorskit-330195943183">1.2 Agregar (Concatenar)</h3>
+
+
+
+<p class="editorskit-329131136210 editorskit-330195943187">Agregar tem como objetivo combinar vários arquivos em um único só. Isso resulta em menos solicitações HTTP. Na prática, faz com que o navegador vá buscar menos vezes a informação no servidor. E menos solicitações HTTP é extremamente importante para a <a href="#">hospedagem compartilhada</a>, que é usada em mais 92% das hospedagens WordPress.</p>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-33020614959"><div class="ub_notify_info"><p class="ub_notify_text" style="text-align:left"> O Autoptimize ainda faz mais. Ele comprime todos os scripts e CSS , adiciona cabeçalhos de expiração, e armazena tudo em cache.  </p></div></div>
+
+
+
+<div class="wp-block-ub-divider editorskit-33020143457"><div class="ub_divider" style="border-top:2px solid #eeeeee;margin-top:50px;margin-bottom:50px"></div></div>
+
+
+
+<h2 id="3-2-análise-de-velocidade-antes" class="editorskit-330131111899 editorskit-330195943199">2. Análise de velocidade (antes)</h2>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-33020541109"><div class="ub_notify_warning"><p class="ub_notify_text" style="text-align:left"> Antes de configurar o plugin precisamos fazer uma análise da velocidade  <br>de carregamento e de outros parâmetros do site para poder comparar o antes e depois.  Se não sabe como fazer, eu explico com mais detalhes <a href="https://github.com/barsadigital/universo-turbo/wp-admin/post.php">nesse tutorial</a> </p></div></div>
+
+
+
+<div class="wp-block-image editorskit-33013616223 editorskit-330195943207"><figure class="aligncenter is-resized"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/antes-autoptimize.png" alt="" class="wp-image-3186" width="325" height="863" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/antes-autoptimize.png 325w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/antes-autoptimize-113x300.png 113w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/antes-autoptimize-11x30.png 11w" sizes="(max-width: 325px) 100vw, 325px"></figure></div>
+
+
+
+<p class="editorskit-33013710670 editorskit-330195943214">Eu criei um <a href="#">ambiente de testes online V1.0 . </a>Todos os parâmetros serão baseados por ele. Se quiser saber quais configurações e plugins estão sendo usados, <a href="#">clique aqui</a></p>
+
+
+
+<p class="editorskit-330131732539 editorskit-330195943220"><strong>Fully Loaded Time – </strong>Tempo total de carregamento da página (segundos).<br></p>
+
+
+
+<p class="editorskit-33013243421 editorskit-330195943224"><strong>Total Page Size</strong> – Tamanho total da página (Megabytes). </p>
+
+
+
+<p class="editorskit-33013241048 editorskit-330195943228"><strong>Requests</strong> – Esse é zica. Solicitações ao servidor. (Quanto mais, muito pior).
+
+</p>
+
+
+
+<div class="wp-block-ub-divider editorskit-33020912485"><div class="ub_divider" style="border-top:2px solid #eeeeee;margin-top:50px;margin-bottom:50px"></div></div>
+
+
+
+<h2 id="4--3-principais-configurações-aba-js-css-html-" class="editorskit-329133959192 editorskit-330195943232"> 3. Principais configurações. Aba (JS, CSS, HTML) </h2>
+
+
+
+<p class="editorskit-42154956727">Para acessar, vá em: Painel/Configurações/Autoptimize</p>
+
+
+
+<div class="wp-block-image zoooom editorskit-32913575716 editorskit-330195943235"><figure class="aligncenter is-resized"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-basicas.png" alt="" class="wp-image-3190" width="316" height="640" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-basicas.png 316w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-basicas-148x300.png 148w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-basicas-15x30.png 15w" sizes="(max-width: 316px) 100vw, 316px"><figcaption>Configurações Básicas</figcaption></figure></div>
+
+
+
+<p class="editorskit-329144631996 editorskit-330195943244"><strong>Otimizar Código CSS</strong> – Ao ativar irá agregar e minificar todo o CSS do seu site e irá agregar o CSS no HTML</p>
+
+
+
+<p class="editorskit-329145419437 editorskit-330195943248"><strong>Otimizar Código Javascript</strong> – Ao ativar irá agregar e “linkar” o Javascript do seu site</p>
+
+
+
+<p class="editorskit-32915613931 editorskit-330195943253"><strong>Otimizar Código HTML</strong> – Ao ativar irá minificar o HTML do seu site</p>
+
+
+
+<p class="editorskit-32915955172 editorskit-330195943256"><strong>URL base da CDN</strong> – Caso você use um CDN, pode inserir a URL aqui. Como eu uso e indico o <a href="#">CDN da Cloudflare</a>, essa opção não se aplica aqui. Deixe em branco</p>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-33020119332"><div class="ub_notify_info"><p class="ub_notify_text" style="text-align:left"> Ative as 3 opções e clique no botão <strong>SALVAR MUDANÇAS </strong></p></div></div>
+
+
+
+<p class="editorskit-329185141593 editorskit-330195943265"></p>
+
+
+
+<h2 id="5-4-configurações-avançadas-aba-extra" class="editorskit-329152352324 editorskit-330195943270">4. Configurações Avançadas. Aba (EXTRA)</h2>
+
+
+
+<div class="wp-block-image editorskit-32915291352 editorskit-330195943272"><figure class="aligncenter is-resized"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-avancadas.png" alt="" class="wp-image-3192" width="317" height="953" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-avancadas.png 317w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-avancadas-100x300.png 100w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/autoptimize-configuracoes-avancadas-10x30.png 10w" sizes="(max-width: 317px) 100vw, 317px"><figcaption>Configurações Avançadas</figcaption></figure></div>
+
+
+
+<p class="editorskit-329152928362 editorskit-330195943280"><strong>Fontes Google –</strong> Hoje, a maioria dos sites usam fontes do Google. Elas são bonitas e há dezenas de fontes para escolher. Mas atrasam a carregamento do site. Ao ativar essa opção, as fontes do Google irão carregar mais rapidamente.</p>
+
+
+
+<p class="editorskit-3291532657 editorskit-330195943283"><strong>Remove emojis – </strong>Nunca ví um site WordPress com essas carinhas. Os emojis atrasam o carregamento do site. Ao ativar, eles serão removidos.</p>
+
+
+
+<p class="editorskit-32915488897 editorskit-330195943287"> <strong>Usar “Preconnect” para domínios de terceiros (usuários avançados)</strong> – Ajuda os navegadores a renderizarem com antecedência algumas solicitações externas. O navegador precisa buscar a informação em outro servidor e depois exibir no seu site.<br>Você pode especificar as URL’s para facilitar esse processo:<br></p>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-42172440934"><div class="ub_notify_success"><p class="ub_notify_text" style="text-align:left"><link rel=”stylesheet” href=”https://use.fontawesome.com/releases/v5.8.1/css/all.css” integrity=”sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf” crossorigin=”anonymous”> </p></div></div>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-4217221196"><div class="ub_notify_success"><p class="ub_notify_text" style="text-align:left"><link rel=”preconnect” href=”https://fonts.gstatic.com/” crossorigin><br></p></div></div>
+
+
+
+<h2 id="6-5-análise-de-velocidade-depois" class="editorskit-330131634838 editorskit-330195943302">5. Análise de velocidade (depois)</h2>
+
+
+
+<div class="wp-block-image editorskit-3301445652 editorskit-330195943309"><figure class="aligncenter is-resized"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/depois-autoptimize.png" alt="" class="wp-image-3195" width="322" height="864" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/depois-autoptimize.png 322w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/depois-autoptimize-112x300.png 112w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/depois-autoptimize-11x30.png 11w" sizes="(max-width: 322px) 100vw, 322px"><figcaption>Com Autoptimize</figcaption></figure></div>
+
+
+
+<p class="editorskit-3301466546 editorskit-330195943313"><strong>Fully Loaded Time – </strong>Subiu. 100ms. Aceitável.</p>
+
+
+
+<p class="editorskit-33014619500 editorskit-330195943317"><strong>Total Page Size</strong> – Caiu. Bom. O plugin fez o trabalho.</p>
+
+
+
+<p class="editorskit-33014633763 editorskit-330195943322"><strong>Requests</strong> – O mais importante. Aqui o plugin mostra sua real utilidade. Eu Curti. de 46 para 32 solicitações. A pontuação também subiu.</p>
+
+
+
+<p class="editorskit-330141011602 editorskit-330195943325">Agora vamos juntar o Autoptimize com um plugin de cache.</p>
+
+
+
+<h2 id="7-6-plugin-de-cache" class="editorskit-32916257776 editorskit-330195943328">6. Plugin de Cache</h2>
+
+
+
+<p class="editorskit-329162510321 editorskit-330195943331">O Autoptimize trabalha muito bem ao lado de um plugin de cache. Neste tutorial vamos configurar o plugin <strong>WP Super Cache</strong>, que é um plugin oficial dos desenvolvedores do WordPress. Há vários plugins de cache bons. Você pode acessar o tutorial que eu desenvolvi para o o <a href="#">WP Super Cache,</a> como também para o <a href="#">WP Rocket</a> e o <a href="#">W3 Total Cache</a>.</p>
+
+
+
+<div class="wp-block-image editorskit-32918411407 editorskit-330195943336"><figure class="aligncenter"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/FireShot-Pro-Screen-Capture-012-Bloggers-Passion-VIP-Group-www_facebook_com.png" alt="" class="wp-image-3066" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/FireShot-Pro-Screen-Capture-012-Bloggers-Passion-VIP-Group-www_facebook_com.png 498w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/04/FireShot-Pro-Screen-Capture-012-Bloggers-Passion-VIP-Group-www_facebook_com-300x245.png 300w" sizes="(max-width: 498px) 100vw, 498px"><figcaption>Enquete no Facebook com mais de 2.455 membros</figcaption></figure></div>
+
+
+
+<div class="wp-block-image editorskit-4217328246"><figure class="aligncenter is-resized"><img src="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/05/wp-super-cacheautoptimize.png" alt="" class="wp-image-3200" width="319" height="860" srcset="https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/05/wp-super-cacheautoptimize.png 319w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/05/wp-super-cacheautoptimize-111x300.png 111w,https://github.com/barsadigital/universo-turbo/wp-content/uploads/2019/05/wp-super-cacheautoptimize-11x30.png 11w" sizes="(max-width: 319px) 100vw, 319px"><figcaption>Autoptimize + WP Super Cache</figcaption></figure></div>
+
+
+
+<p class="editorskit-330143021802 editorskit-330195943344">Foi um grande resultado, apenas usando 2 plugins. Há muito o que melhorar ainda. </p>
+
+
+
+<h2 id="8-7-arquivos" class="editorskit-330144633718 editorskit-330195943351">7. Arquivos</h2>
+
+
+
+<div class="wp-block-ub-notification-box editorskit-330145520290"><div class="ub_notify_info"><p class="ub_notify_text" style="text-align:left"> Download do <strong>Autoptimize</strong>, <a href="https://github.com/barsadigital/universo-turbo/wp-admin/post.php">clique aqui</a>. <br> Download do <strong>WP Super Cache</strong>, <a href="https://github.com/barsadigital/universo-turbo/wp-admin/post.php">clique aqui</a>. <br></p></div></div>
+
+								
+							</section>
+
+							<footer class="article-footer">
+
+								<p class="footer-categories"><span class="categories-title">Arquivado em:</span> <a href="https://github.com/barsadigital/universo-turbo/plugins/" rel="category tag">Plugins WP</a></p><p class="footer-tags"><span class="tags-title">Tags:</span> <a href="https://github.com/barsadigital/universo-turbo/tag/autoptimize/" rel="tag">autoptimize</a>, <a href="https://github.com/barsadigital/universo-turbo/tag/cache/" rel="tag">cache</a></p>
+								
+							</footer>
+
+							<div class="total">
+  <div class="wid_title">
+  <h2> Saiba Mais</h2>
+  </div>
+
+  <div class="row">
+  <ul>
+  </ul><ol><li><a href="#First_Sub_Point_1">First Sub Point 1</a>  
+      </li><li><a href="#Second_Point_Header">Second Point Header</a>
+      </li><li><a href="#Third_Point_Header">Third Point Header</a>
+        </li><li><a href="#First_Sub_Point_1">First Sub Point 1</a>  
+      </li><li><a href="#Second_Point_Header">Second Point Header</a>
+      </li><li><a href="#Third_Point_Header">Third Point Header</a>
+        </li><li><a href="#First_Sub_Point_1">First Sub Point 1</a>  
+      </li><li><a href="#Second_Point_Header">Second Point Header</a>
+      </li><li><a href="#Third_Point_Header">Third Point Header</a>
+      </li>
+   
+  </ol></div>
+</div>
+
+
+
+							
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deixe um comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="/tirando-leite-de-pedra-com-o-plugin-autoptimize-no-wordpress/#respond" style="display:none;">Cancelar resposta</a></small></h3>			<form action="https://github.com/barsadigital/universo-turbo/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">O seu endereço de e-mail não será publicado.</span> Campos obrigatórios são marcados com <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentário</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nome <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Site</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Salvar meus dados neste navegador para a próxima vez que eu comentar.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentário"> <input type="hidden" name="comment_post_ID" value="3009" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>			</form>
+			</div>
+	
+							
+						</article>
+						
+						
+						
+					</main>
+
+					
+				</div>
+
+				
+			</div>
+			
+			
+		</div>
+
+
+		<footer id="footer" class="wpbf-page-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+
+			
+			<div class="wpbf-inner-footer wpbf-container wpbf-container-center wpbf-footer-one-column">
+
+				<div class="wpbf-inner-footer-content">
+
+					© 2019 - Universo Turbo | All rights reserved
+				</div>
+
+				
+			</div>
+
+			
+		</footer>
+	</div>
+
+
+<script type="text/javascript" src="https://github.com/barsadigital/universo-turbo/wp-content/plugins/ultimate-blocks/src/blocks/table-of-contents/front.js"></script>
+<script type="text/javascript" src="https://github.com/barsadigital/universo-turbo/wp-content/themes/page-builder-framework/js/min/site-min.js"></script>
+<script type="text/javascript" src="https://github.com/barsadigital/universo-turbo/wp-content/themes/page-builder-framework/js/min/mobile-hamburger-min.js"></script>
+
+</body>
+
+</html>
